@@ -1,0 +1,121 @@
+* { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee8da;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+
+#logo img {
+    width: 150px;
+}
+
+#links ul {
+    display: flex;
+    gap: 15px;
+    
+}
+
+#links li a {
+    color: black;
+    font-size: 20px;
+}
+
+#catalago-h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#catalago-h1 h1 {
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    display: flex;
+    text-align: center;
+}
+
+#lançamento {
+    margin-top: 50px;
+}
+
+
+#catalago-h1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Esconde o menu hambúrguer por padrão */
+#menu {
+    display: none;
+
+}
+
+/* Configuração do menu no mobile */
+@media (max-width: 450px) {
+    #links ul {
+        display: none; /* Esconde os links no mobile por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.841);
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 30px 0 30px 0px;  
+    }
+
+    #links li a {
+        color: #eee8da;
+    }
+
+    /* Exibe o menu quando a classe 'active' estiver ativada */
+    #links ul.active {
+        display: flex;
+    }
+
+    #links li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu img {
+        display: flex;
+        width: 45px;
+        cursor: pointer;
+    }
+    #catalago-h1 h1 {
+        font-family: "anton", sans-serif;
+        font-size: 24px;
+        display: flex;
+    }
+
+    #catalago-h1 p {
+        display: flex;
+        justify-content: center;
+        padding: 0 15px 0 15px;
+        font-size: 14px;
+    }
+    #logo img {
+        width: 130px;
+    }
+}
+
+
+
