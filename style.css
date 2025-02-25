@@ -98,8 +98,9 @@ body {
 
     #menu img {
         display: flex;
-        width: 45px;
+        width: 40px;
         cursor: pointer;
+        align-items: center;
     }
     #catalago-h1 h1 {
         font-family: "anton", sans-serif;
