@@ -10,6 +10,13 @@ body {
     background-color: #eee8da;
 }
 
+.joia img {
+    width: 100%;  /* Garante que a imagem ocupe toda a largura disponível */
+    height: auto;  /* Mantém a proporção da imagem */
+    display: block;  /* Elimina margens ou espaçamentos extras que possam estar causando desalinhamento */
+    margin: 0 auto;  /* Centraliza a imagem */
+}
+
 #header {
     display: flex;
     justify-content: space-between;
@@ -64,6 +71,39 @@ body {
 
 }
 
+.preco-antigo {
+    text-decoration: line-through;
+    color: red; /* Ou qualquer cor que destaque */
+    margin-right: 10px;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(255, 64, 64); /* Cor do fundo */
+    color: white; /* Cor do texto */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.joia {
+    position: relative;
+    overflow: hidden;
+}
+
+.joia img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#esgotado {
+    background-color: rgb(101, 101, 101);
+}
 /* Configuração do menu no mobile */
 @media (max-width: 450px) {
     #links ul {
