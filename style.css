@@ -7,7 +7,180 @@
 }
 
 body {
-    background-color: #eee8da;
+    background-color: #fff0f5;
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(255, 182, 193, 0.2) 1px, transparent 0),
+        radial-gradient(circle at 1px 1px, rgba(255, 182, 193, 0.15) 1px, transparent 0);
+    background-size: 30px 30px, 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+#mothers-day-banner {
+    margin-top: 80px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+#mothers-day-banner::before {
+    content: '❤';
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.1;
+    animation: float 3s ease-in-out infinite;
+}
+
+#mothers-day-banner h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#mothers-day-banner p {
+    font-size: 1em;
+    font-style: italic;
+}
+
+#catalago-h1 {
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+#catalago-h1 h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff1493;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#catalago-h1 h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    border-radius: 3px;
+}
+
+.joia {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.joia::before {
+    content: '❤';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff69b4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.joia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255, 105, 180, 0.25);
+}
+
+.joia:hover::before {
+    opacity: 1;
+}
+
+.joia h3 {
+    color: #ff1493;
+    margin: 15px 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.joia p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.joia a {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.joia a:hover {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.promo-badge {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#catalago-h1 p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 .joia img {
@@ -20,8 +193,15 @@ body {
 #header {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 20px 40px;
     align-items: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #logo img {
@@ -45,24 +225,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-#catalago-h1 h1 {
-    font-family: "anton", sans-serif;
-    font-size: 40px;
-    display: flex;
-    text-align: center;
-}
 
 #lançamento {
     margin-top: 50px;
-}
-
-
-#catalago-h1 p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 /* Esconde o menu hambúrguer por padrão */
@@ -77,85 +242,165 @@ body {
     margin-right: 10px;
 }
 
-.promo-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgb(255, 64, 64); /* Cor do fundo */
-    color: white; /* Cor do texto */
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    z-index: 10;
-}
-
-.joia {
-    position: relative;
-    overflow: hidden;
-}
-
-.joia img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 #esgotado {
     background-color: rgb(101, 101, 101);
 }
+
 /* Configuração do menu no mobile */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+    #header {
+        padding: 15px;
+    }
+
+    #logo img {
+        width: 120px;
+    }
+
     #links ul {
-        display: none; /* Esconde os links no mobile por padrão */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 80px;
         right: 20px;
-        background-color: rgba(0, 0, 0, 0.841);
-        padding: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 30px 0 30px 0px;  
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        width: 200px;
     }
 
     #links li a {
-        color: #eee8da;
+        color: #ff1493;
+        font-size: 1.1em;
+        padding: 10px 0;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
     }
 
-    /* Exibe o menu quando a classe 'active' estiver ativada */
+    #links li a:hover {
+        color: #ff69b4;
+        transform: translateX(5px);
+    }
+
     #links ul.active {
         display: flex;
     }
 
-    #links li {
-        padding: 10px 0;
-        text-align: center;
-    }
-
     #menu {
         display: flex;
+        align-items: center;
     }
 
     #menu img {
-        display: flex;
-        width: 40px;
+        width: 30px;
         cursor: pointer;
-        align-items: center;
     }
+
+    #mothers-day-banner {
+        margin-top: 70px;
+        padding: 12px;
+    }
+
+    #mothers-day-banner h2 {
+        font-size: 1.8em;
+    }
+
+    #mothers-day-banner p {
+        font-size: 0.9em;
+    }
+
+    #catalago-h1 {
+        padding: 0 15px;
+    }
+
     #catalago-h1 h1 {
-        font-family: "anton", sans-serif;
-        font-size: 24px;
-        display: flex;
+        font-size: 1.8em;
     }
 
     #catalago-h1 p {
-        display: flex;
-        justify-content: center;
-        padding: 0 15px 0 15px;
-        font-size: 14px;
+        font-size: 0.9em;
+        padding: 10px;
+        margin: 0 10px 15px;
     }
-    #logo img {
-        width: 130px;
+
+    #catalogo {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .joia {
+        padding: 15px;
+    }
+
+    .joia h3 {
+        font-size: 1.1em;
+    }
+
+    .joia p {
+        font-size: 0.9em;
+    }
+
+    .joia a {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+
+    .cta-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .cta-section p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    #mothers-day-banner {
+        margin-top: 65px;
+        padding: 10px;
+    }
+
+    #mothers-day-banner h2 {
+        font-size: 1.6em;
+    }
+
+    #mothers-day-banner p {
+        font-size: 0.85em;
+    }
+
+    #catalago-h1 h1 {
+        font-size: 1.5em;
+    }
+
+    #catalago-h1 p {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    .joia {
+        padding: 12px;
+    }
+
+    .joia h3 {
+        font-size: 1em;
+    }
+
+    .joia p {
+        font-size: 0.85em;
+    }
+
+    .joia a {
+        padding: 8px 15px;
+        font-size: 0.8em;
     }
 }
 
